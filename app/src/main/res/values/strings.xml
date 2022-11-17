@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Saludapp</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_hint">Ingrese correo electronico</string>
+    <string name="Password_hint">Ingrese la Contraseña</string>
+    <string name="forgot_label">Olvidaste la Contraseña</string>
+    <string name="ingresar_label">Ingresar</string>
+    <string name="labelL1">No tengo una cuenta</string>
+    <string name="labelL2">Registrate Ahora!</string>
+    <string name="email_error">Email no Valido</string>
+    <string name="password_error">Password no Valido</string>
+    <string name="change_password">cambiar la contraseña</string>
+    <string name="new_account">No tengo Cuenta</string>
+    <string name="write_name">Escriba su Nombre</string>
+    <string name="label3">tengo cuenta</string>
+    <string name="label4">iniciar sesion</string>
+    <string name="male_label">masculino</string>
+    <string name="female_label">femenino</string>
+    <string name="other_label">otro</string>
+</resources>
