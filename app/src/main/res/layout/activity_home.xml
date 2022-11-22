@@ -37,5 +37,28 @@
 
 
    </com.google.android.material.appbar.AppBarLayout>
+    
+    <fragment
+        android:id="@+id/nav_host_home_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home_toolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_home_navigate_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:navGraph="@navigation/home_nav"
+        app:defaultNavHost="true"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/activity_home_navigate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/home_menu"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"/>
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>

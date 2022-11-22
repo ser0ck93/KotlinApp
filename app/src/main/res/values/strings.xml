@@ -27,4 +27,6 @@
     <string name="male_label">masculino</string>
     <string name="female_label">femenino</string>
     <string name="other_label">otro</string>
+    <string name="home_title">Cambia tu vida</string>
+    <string name="home_subtitle">Agenda una cita y te ayudamos con el problema al que te enfrentas</string>
 </resources>
