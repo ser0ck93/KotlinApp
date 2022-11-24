@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_doctor_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:adjustViewBounds="true"
+        tools:srcCompat="@drawable/doc"
+        android:scaleType="centerInside"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_doctor_specialist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="General"
+        android:textColor="@color/primary"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_image"
+        app:layout_constraintTop_toTopOf="@+id/item_doctor_image"
+        android:textAppearance="@style/Theme.4BB4G10.Body1"
+        android:layout_marginStart="@dimen/small_margin"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_doctor_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="DR. Juan Fonseca"
+        android:textColor="@color/primaryLigth"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_image"
+        app:layout_constraintTop_toBottomOf="@+id/item_doctor_specialist"
+        android:textAppearance="@style/Theme.4BB4G10.Body3"
+        android:layout_marginStart="@dimen/small_margin"/>
+
+    <RatingBar
+        android:id="@+id/item_star_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_image"
+        app:layout_constraintTop_toBottomOf="@+id/item_doctor_1"
+        android:numStars="5"
+        android:rating="4.5"
+        android:isIndicator="true"
+        android:layout_marginStart="@dimen/small_margin"
+        style="?android:attr/ratingBarStyleSmall"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/description_doctor_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="+300 pacientes"
+        android:textColor="@color/primary"
+        app:layout_constraintStart_toEndOf="@id/item_star_1"
+        app:layout_constraintTop_toBottomOf="@+id/item_star_1"
+        app:layout_constraintEnd_toEndOf="@id/item_doctor_1"
+        android:textAppearance="@style/Theme.4BB4G10.Body2"
+        android:layout_marginTop="0dp"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        app:layout_constraintTop_toBottomOf="@id/description_doctor_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_width="0dp"
+        android:layout_height="1dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -68,9 +68,18 @@
     <style name="Theme.4BB4G10.Body2" parent="TextAppearance.MaterialComponents.Body2">
 
         <item name="fontFamily">monospace</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">10dp</item>
         <item name="android:textColor">@color/primary</item>
         <item name="fontWeight">700</item>
+
+    </style>
+
+    <style name="Theme.4BB4G10.Body3" parent="TextAppearance.MaterialComponents.Body1">
+
+        <item name="fontFamily">monospace</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="fontWeight">100</item>
 
     </style>
 

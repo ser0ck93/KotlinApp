@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SpecialistFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="specialist" />
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".SpecialistFragment">
 
-</FrameLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/specialist_fragment_banner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ramasmedicina"
+            android:scaleType="fitXY"
+            android:layout_width="0dp"
+            android:layout_height="148dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/specialist_fragment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/specialist_fragment_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="General"
+            android:textAppearance="@style/Theme.4BB4G10.Body3"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/specialist_fragment_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/specialist_fragment_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/small_margin"
+            tools:text="Profesionales capacitados para realizar el diagnostico y tratamiento"
+            android:gravity="center"
+            android:textAppearance="@style/Theme.4BB4G10.Body2"/>
+
+
+
+    <FrameLayout
+        android:id="@+id/specialist_fragment_recycler_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/specialist_fragment_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/specialist_fragment_recycler_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hom_services"
+            android:gravity="center"
+            android:textAppearance="@style/Theme.4BB4G10.Body2"
+            android:textColor="@color/primary"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/specialist_fragment_recycler_search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <AutoCompleteTextView
+        android:id="@+id/specialist_fragment_recycler_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</com.google.android.material.textfield.TextInputLayout>
+
+    </FrameLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_fragment_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specialist_fragment_recycler_container"
+        app:layout_constraintVertical_bias="0.0"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_doctor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
